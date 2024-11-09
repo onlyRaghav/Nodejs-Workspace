@@ -22,3 +22,8 @@ console.log(path.isAbsolute("https://github.com/onlyRaghav/Nodejs-Workspace.git"
 const pathObj=path.parse("https://github.com/onlyRaghav/Nodejs-Workspace.git")
 console.log(pathObj); // returns a path obj which contains the root,dir,base,ext,name of the given path
 
+let pathToDir = path.normalize('//node.js/module/js//dist');
+console.log(pathToDir); //return a normalize path string deals with '//','.','..'
+
+let relativePath = path.relative('/home/user/config/', '/home/user/js/');
+console.log(relativePath); // accepts two arguments and returns the relative path between them(here ../js)
